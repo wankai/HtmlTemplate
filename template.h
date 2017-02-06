@@ -12,6 +12,7 @@ class NameValue
     NameValue tmp;
     tmp.set_name(name);
     tmp.set_value(value);
+    return tmp;
   }
  
   inline const std::string& name()

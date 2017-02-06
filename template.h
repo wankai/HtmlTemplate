@@ -4,6 +4,12 @@
 
 namespace hte {
 
+class Combine
+{
+ public:
+ private:
+};
+ 
 class NameValue
 {
  public:

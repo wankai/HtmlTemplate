@@ -7,6 +7,9 @@ namespace hte {
 class Combine
 {
  public:
+  static Combine Build(const std::string& pattern, std::string* err);
+  std::string out(const std::string& src);
+  
  private:
 };
  

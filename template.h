@@ -40,6 +40,32 @@ class NameValue
   string value_;
 };
 
+class Field
+{
+ public:
+ private:
+  std::string name_;
+  std::string xpath_;
+  std::string type_;
+  std::string prop_;
+  std::string value_;
+  std::string filter_;
+  std::regex filter_regex_;
+  Combine combine_;
+  std::string method_;
+ 
+  FieldType field_type_;
+};
+ 
+class Item
+{
+ public:
+ private:
+  std::string name_;
+  std::string xpath_;
+  std::vector<Field> fields_;
+};
+ 
 class Section
 {
  public:
@@ -48,6 +74,9 @@ class Section
   std::string pattern_;
   std::regex pattern_regex_;
   std::vector<NameValue> name_values_;
+ 
+  std::vector<Field> links_;
+  std::vector<Item> items_;
 };
 
 class Template

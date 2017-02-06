@@ -73,6 +73,7 @@ class Item
   std::string name_;
   std::string xpath_;
   std::vector<Field> fields_;
+  bool repeatable_
 };
  
 class Section

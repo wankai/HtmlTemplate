@@ -27,7 +27,12 @@ class Token {
 class Tokenizer
 {
  public:
+  Token Next();
+  bool Valid();
+  std::string error();
  private:
+  size_t line_;
+  size_t column_;
 };
 
 } // namespace hte

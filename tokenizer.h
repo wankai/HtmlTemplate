@@ -27,10 +27,13 @@ class Token {
 class Tokenizer
 {
  public:
+  Tokenizer(const std::string& content);
+  
   Token Next();
   bool Valid();
   std::string error();
  private:
+  const std::string& content_;
   size_t line_;
   size_t column_;
 };

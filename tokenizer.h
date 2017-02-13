@@ -31,7 +31,7 @@ class Tokenizer
   
   Token Next();
   bool Valid();
-  std::string error();
+  std::string Error();
  private:
   const std::string& content_;
   size_t line_;

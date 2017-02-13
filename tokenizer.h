@@ -6,6 +6,9 @@ enum TokenType
 {
   kOpenedTag = 1,
   kClosedTag = 2,
+  kProp = 3,
+  kValue = 4,
+  kEqual = 5,
 };
 
 class Token {

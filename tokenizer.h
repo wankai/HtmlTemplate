@@ -4,11 +4,20 @@ namespace hte {
 
 enum TokenType
 {
-  kOpenedTag = 1,
+  kOpenedTagBegin = 1,
   kClosedTag = 2,
-  kProp = 3,
-  kValue = 4,
+  kPropName = 3,
+  kPropValue = 4,
   kEqual = 5,
+};
+
+enum Status
+{
+  kStart = 1,
+  kInOpenedTagBegin = 2,
+  kInClosedTag = 3,
+  kInPropName = 4,
+  kInPropValue = 5
 };
 
 class Token {

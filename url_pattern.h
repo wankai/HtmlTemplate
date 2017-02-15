@@ -5,7 +5,8 @@
 class UrlPattern
 {
  public:
-  static Build(const std::string& s);
+  static bool Build(const std::string& s, UrlPattern* pattern);
+ 
   bool Match(std::unordered_map<string, string>* match_result);
  private:
   std::regex path_regex_;

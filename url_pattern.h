@@ -1,5 +1,7 @@
 #pragma once
 
+#include <regex>
+
 class UrlPattern
 {
  public:

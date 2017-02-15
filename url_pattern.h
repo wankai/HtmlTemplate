@@ -12,7 +12,7 @@ class UrlPattern
  
   Add(const std::string& query_name, const std::string& value_pattern)
   {
-    query_regexs_.insert(std::make_pair(query_name, value_pattern));
+    query_regexs_.insert(std::make_pair(query_name, std::regex(value_pattern)));
   }
  
   bool Match(const std::string& target,

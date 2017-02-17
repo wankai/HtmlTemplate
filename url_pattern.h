@@ -25,7 +25,7 @@ class UrlPattern
  
   bool Match(const std::string& target,
              MatchResult* match_result,
-             MatchOption = MatchOptions());
+             MatchOption = MatchOption());
  private:
   std::regex path_regex_;
   std::unordered_map<std::string, std::regex> query_regexs_;

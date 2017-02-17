@@ -9,7 +9,6 @@ class ErrorCode
   }
  
   inline static ErrorCode Ok();
-  inline static ErrorCode ErrorNotFound();
  
   bool ok() const;
  

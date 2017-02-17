@@ -8,6 +8,18 @@ class Error
   {
   }
  
+  ~Error()
+  {
+    if (msg_ != NULL) {
+      free(msg_);
+    }
+  }
+ 
+  Error(const char* msg)
+  {
+    return 
+  }
+ 
   inline static Error OK()
   {
     return Error();

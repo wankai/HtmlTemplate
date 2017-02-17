@@ -2,4 +2,4 @@
 
 #include <string>
 
-typedef std::unordered_map<std::string, std::string> Mathc;
+typedef std::unordered_map<std::string, std::string> Match;

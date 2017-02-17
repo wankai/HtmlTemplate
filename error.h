@@ -17,8 +17,10 @@ class Error
  
   // msg should be a string literal
   Error(const char* msg)
+    : msg_(msg)
   {
-    return 
+    static_assert(__builtin_constant_p(msg),
+                  "msg parameter should be a string literal");
   }
  
   Error(const std::string& msg)

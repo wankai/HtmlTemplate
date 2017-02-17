@@ -15,9 +15,15 @@ class Error
     }
   }
  
+  // msg should be a string literal
   Error(const char* msg)
   {
     return 
+  }
+ 
+  Error(const std::string& msg)
+  {
+    
   }
  
   inline static Error OK()

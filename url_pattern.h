@@ -5,7 +5,8 @@
 class UrlPattern
 {
  public:
-  typedef std::unordered_map<std::string, std::string> MatchResult; 
+  typedef std::unordered_map<std::string, std::string> MatchResult;
+ 
   UrlPattern(const std::string& path_pattern)
     : path_regex_(path_pattern)
   {

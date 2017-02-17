@@ -23,6 +23,8 @@ class UrlPattern
     query_regexs_.insert(std::make_pair(query_name, std::regex(value_pattern)));
   }
  
+  void reset();
+ 
   bool Match(const std::string& target,
              MatchResult* match_result,
              MatchOption = MatchOption());

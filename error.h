@@ -10,7 +10,7 @@ class Error
  
   ~Error()
   {
-    if (msg_ != NULL) {
+    if (msg_ != NULL && !__builtin_constant_p(msg_)) {
       free(msg_);
     }
   }

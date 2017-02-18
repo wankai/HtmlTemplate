@@ -1,5 +1,10 @@
 #pragma once
 
+#define OK Error(__FILE__, __FUNCTION__, __LINE__)
+
+#define WRAPPED_ERROR(msg) \
+  Error(__FILE__, __FUNCTION__, __LINE__, msg, last_error)
+
 class Error
 {
  public:
@@ -33,6 +38,8 @@ class Error
     return Error();
   }
  
+  inline static Error WrapError(const char* msg, Error* last_error); 
+ 
   inline bool ok() const
   {
     return msg_ == NULL;
@@ -44,5 +51,6 @@ class Error
   }
  
  private:
+  // FILE FUNCTION LINE \n
   char* msg_;
 };

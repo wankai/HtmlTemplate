@@ -29,6 +29,11 @@ class Error
                   "msg parameter should be a string literal");
   }
  
+  Error(const char* file,
+        const char* func,
+        int line,
+        const char* msg);
+  
   Error(const std::string& msg)
   {
     

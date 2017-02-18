@@ -39,8 +39,6 @@ class Error
     return Error();
   }
  
-  inline static Error WrapError(const char* msg, Error* last_error); 
- 
   inline bool ok() const
   {
     return msg_ == NULL;

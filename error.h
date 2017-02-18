@@ -1,6 +1,7 @@
 #pragma once
 
-#define OK Error(__FILE__, __FUNCTION__, __LINE__)
+#define ERROR(msg) \
+  Error(__FILE__, __FUNCTION__, __LINE__, msg)
 
 #define WRAPPED_ERROR(msg) \
   Error(__FILE__, __FUNCTION__, __LINE__, msg, last_error)

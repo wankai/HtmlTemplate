@@ -3,7 +3,7 @@
 #define ERROR(msg) \
   Error(__FILE__, __FUNCTION__, __LINE__, msg)
 
-#define WRAPPED_ERROR(msg) \
+#define WRAPPED_ERROR(msg, last_error) \
   Error(__FILE__, __FUNCTION__, __LINE__, msg, last_error)
 
 class Error

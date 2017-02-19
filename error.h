@@ -20,9 +20,9 @@ class Error
         const char* msg,
         Error* last_error);
   
-  virtual std::string what() const;
+  virtual std::string stack_trace() const;
  private:
-  char* msg_;
+  std::string msg_;
   Error* next_;
 };
 

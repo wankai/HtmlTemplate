@@ -3,11 +3,22 @@
 class XPath
 {
  public:
+  enum OpType
+  {
+    EQUAL = 1,
+    MATCH = 2,
+  };
+ 
   class Node
   {
    public:
-   private:
-    
+    std::string tag;
+    std::string prop;
+    OpType op;
+    union {
+     std::string value;
+     std::regex value_regex;
+    };
   };
   
   static bool Build(const std::string& format,

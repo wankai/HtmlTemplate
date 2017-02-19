@@ -20,7 +20,7 @@ class Error
         const char* msg,
         Error* last_error);
   
-  virtual const char* what() const;
+  virtual std::string what() const;
  private:
   char* msg_;
   Error* next_;

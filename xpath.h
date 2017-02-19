@@ -19,6 +19,7 @@ class XPath
      std::string value;
      std::regex value_regex;
     };
+    std::string index;
   };
   
   static bool Build(const std::string& format,

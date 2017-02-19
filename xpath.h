@@ -3,6 +3,8 @@
 class XPath
 {
  public:
+  static void RegisterTag(const std::string& tag);
+ 
   enum OpType
   {
     EQUAL = 1,
@@ -36,5 +38,6 @@ class XPath
   const_iterator end();
   
  private:
+  static std::set<std::string> valid_tags;
   std::vector<XPath::Node> nodes_;
 };

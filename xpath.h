@@ -36,6 +36,8 @@ class XPath
   
   iterator end();
   const_iterator end();
+ 
+  std::string str() const;
   
  private:
   static std::set<std::string> valid_tags;

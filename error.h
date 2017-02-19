@@ -9,6 +9,12 @@
 class Error
 {
  public:
+  virtual const char* what() const;
+};
+
+class Error
+{
+ public:
   Error()
    : msg_(NULL)
   {

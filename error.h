@@ -9,7 +9,21 @@
 class Error
 {
  public:
+  Error(const char* file,
+        const char* func,
+        int line,
+        const char* msg);
+  
+  Error(const char* file,
+        const char* func,
+        int line,
+        const char* msg,
+        Error* last_error);
+  
   virtual const char* what() const;
+ private:
+  char* msg_;
+  Error* next_;
 };
 
 class Error

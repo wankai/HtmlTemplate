@@ -5,6 +5,9 @@ class XPath
  public:
   class Node
   {
+   public:
+   private:
+    
   };
   
   static bool Build(const std::string& format,
